@@ -39,7 +39,6 @@ const FlavorTitle = () => {
       scrollTrigger: {
         trigger: ".flavor-section",
         start: "top 1%",
-        markers: true,
       },
     });
   });

@@ -11,7 +11,7 @@ const MassageSection = () => {
       type: "words",
     });
     const paragraphSplit = SplitText.create(".pragagraph p", {
-      type: "word, lines",
+      type: "lines",
       linesClass: "paragraph-line",
     });
 
@@ -56,7 +56,7 @@ const MassageSection = () => {
 
     const paragraphTl = gsap.timeline({
       scrollTrigger: {
-        trigger:".paragraph-line",
+        trigger:".pragagraph p",
         start:"top center",
         // markers:true
       },
@@ -64,7 +64,7 @@ const MassageSection = () => {
     paragraphTl.from(paragraphSplit.words,{
         yPercent:300,
         rotate:3,
-        stagger: 0.01,
+        stagger: 0.02,
         duration:1,
         ease:"power1.inOut"
     })
@@ -93,9 +93,9 @@ const MassageSection = () => {
           <div className="flex-center md:mt-20 mt-10">
             <div className="max-w-md px-10 flex-center overflow-hidden">
               <p>
-                Rev up your rebel spirit and feed the
-                 adventure of life with SPYLT, where you’re
-                 one chug away from epic nostalgia and fearless fun.
+                Rev up your rebel spirit and feed the
+                 adventure of life with SPYLT, where you’re
+                 one chug away from epic nostalgia and fearless fun.
               </p>
             </div>
           </div>
