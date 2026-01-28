@@ -11,7 +11,7 @@ const MassageSection = () => {
       type: "words",
     });
     const paragraphSplit = SplitText.create(".pragagraph p", {
-      type: "lines",
+      type: "words, lines",
       linesClass: "paragraph-line",
     });
 
@@ -56,7 +56,7 @@ const MassageSection = () => {
 
     const paragraphTl = gsap.timeline({
       scrollTrigger: {
-        trigger:".pragagraph p",
+        trigger:".message-content",
         start:"top center",
         // markers:true
       },
@@ -64,7 +64,7 @@ const MassageSection = () => {
     paragraphTl.from(paragraphSplit.words,{
         yPercent:300,
         rotate:3,
-        stagger: 0.02,
+        stagger: 0.01,
         duration:1,
         ease:"power1.inOut"
     })
