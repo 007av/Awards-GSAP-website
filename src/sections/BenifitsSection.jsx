@@ -2,6 +2,7 @@ import React from "react";
 import ClippathTitle from "../components/ClippathTitle";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import VideoPinSection from "../components/VideoPinSection";
 
 const BenifitsSection = () => {
 
@@ -12,7 +13,6 @@ const BenifitsSection = () => {
             scrollTrigger: {
                 trigger:".benefit-section",
                 scrub: 1.5,
-                markers: true,
                 start:" top 60%",
                 end: "top top",
 
@@ -92,6 +92,11 @@ const BenifitsSection = () => {
             <p>And much more..</p>
           </div>
         </div>
+      </div>
+
+      <div className=" relative overlay-box">
+        <VideoPinSection/>
+
       </div>
     </section>
   );
